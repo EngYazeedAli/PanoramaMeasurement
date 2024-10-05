@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FastAPI: Uvicorn",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "app.main:app",  // Replace 'main:app' with 'yourfile:app_instance_name'
+                "--reload",  // Enables auto-reload on code changes
+                "--host", "0.0.0.0",  // Specifies the host
+                "--port", "8000"  // Specifies the port
+            ],
+            "jinja": true,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

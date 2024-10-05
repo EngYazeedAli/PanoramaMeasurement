@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+env/
+
+# IDE settings
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+#Images
+*.jpeg
+*.jpg
+*.png
+*.gif
+*.bmp
+*.svg
+*.ico
