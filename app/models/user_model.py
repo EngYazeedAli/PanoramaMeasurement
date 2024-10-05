@@ -9,7 +9,7 @@ class User(BaseModel):
     email: str
     password: str
     role: Optional[str] = "USER"
-    is_active: Optional[bool] = False
+    is_active: Optional[bool] = True
     
 
     @validator("password")

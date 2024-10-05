@@ -25,7 +25,7 @@ async def get_all_users_api():
             return result
 
     except ValueError as error:
-        raise HTTPException(status_code = 200, detail = str(error))
+        raise HTTPException(status_code = 400, detail = str(error))
 
     except Exception as error:
         raise HTTPException(status_code = 500, detail = str(error))
@@ -42,7 +42,7 @@ async def create_user_api(user: User):
         return created_user
 
     except ValueError as error:
-        raise HTTPException(status_code = 200, detail = str(error))
+        raise HTTPException(status_code = 422, detail = str(error))
 
     except Exception as error:
         raise HTTPException(status_code = 500, detail = str(error))
@@ -58,7 +58,7 @@ async def get_user_api(id: str, ):
         return  existed_user
 
     except ValueError as error:
-        raise HTTPException(status_code = 200, detail = str(error))
+        raise HTTPException(status_code = 404, detail = str(error))
 
     except Exception as error:
         raise HTTPException(status_code = 500, detail = str(error))
@@ -74,7 +74,7 @@ async def update_user_api(user: UpdateUser, id: str):
         return updated_user
 
     except ValueError as error:
-        raise HTTPException(status_code = 200, detail = str(error))
+        raise HTTPException(status_code = 400, detail = str(error))
 
     except Exception as error:
         raise HTTPException(status_code = 500, detail = str(error))
@@ -90,7 +90,7 @@ async def activate_user_api(id: str):
         return activated_user
 
     except ValueError as error:
-        raise HTTPException(status_code = 200, detail = str(error))
+        raise HTTPException(status_code = 404, detail = str(error))
 
     except Exception as error:
         raise HTTPException(status_code = 500, detail = str(error))
@@ -106,7 +106,7 @@ async def deactivate_user_api(id: str):
         return deactivated_user
 
     except ValueError as error:
-        raise HTTPException(status_code = 200, detail = str(error))
+        raise HTTPException(status_code = 404, detail = str(error))
 
     except Exception as error:
         raise HTTPException(status_code = 500, detail = str(error))
@@ -121,7 +121,7 @@ async def login_api(user: Login):
         return existed_user
 
     except ValueError as error:
-        raise HTTPException(status_code = 200, detail = str(error))
+        raise HTTPException(status_code = 401, detail = str(error))
 
     except Exception as error:
         raise HTTPException(status_code = 500, detail = str(error))
